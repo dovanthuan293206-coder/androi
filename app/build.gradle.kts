@@ -1,7 +1,16 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
     id("com.google.gms.google-services")
+}
+
+val localProperties = providers.fileContents(rootProject.layout.projectDirectory.file("local.properties"))
+    .asText.orElse("").map { contents -> Properties().apply { load(contents.reader()) } }
+val vilaoKey = localProperties.get().getProperty("vilao.apiKey", "").trim()
+require(vilaoKey.isEmpty() || vilaoKey.matches(Regex("[A-Za-z0-9_-]+"))) {
+    "Invalid vilao.apiKey in local.properties"
 }
 
 android {
@@ -21,7 +30,11 @@ android {
     }
 
     buildTypes {
+        debug {
+            buildConfigField("String", "VILAO_API_KEY", "\"$vilaoKey\"")
+        }
         release {
+            buildConfigField("String", "VILAO_API_KEY", "\"\"")
             optimization {
                 enable = false
             }
@@ -33,6 +46,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 }
 
