@@ -331,10 +331,7 @@ private fun AccountStudyMentor(uid: String, email: String, signOut: () -> Unit, 
                                 visualTransformation = PasswordVisualTransformation(),
                                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password)
                             )
-                            Text(
-                                if (BuildConfig.VILAO_API_KEY.isNotBlank()) "Bản debug đã có khóa mặc định. Nhập ở đây để dùng khóa khác trong phiên này."
-                                else "Khóa nhập ở đây được giữ trong phiên hiện tại."
-                            )
+                            Text("Nhập khóa Vilao riêng của bạn. App giữ khóa trong phiên hiện tại.")
                         }
                         Panel("Tùy chọn của bạn") {
                             Text(selectedSubjects.joinToString().ifEmpty { "Chưa chọn môn học" })

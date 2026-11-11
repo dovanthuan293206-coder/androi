@@ -3,7 +3,6 @@ package com.example.aistudymentor.data
 import android.content.Context
 import android.net.Uri
 import android.util.Base64
-import com.example.aistudymentor.BuildConfig
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.json.JSONObject
@@ -65,8 +64,7 @@ internal object StudyAi {
     }
 
     private fun complete(apiKey: String, content: Any): String {
-        val key = apiKey.ifBlank { BuildConfig.VILAO_API_KEY }
-        require(key.isNotBlank()) { "Nhập khóa Vilao trong tab Cá nhân trước khi sử dụng AI." }
+        require(apiKey.isNotBlank()) { "Nhập khóa Vilao trong tab Cá nhân trước khi sử dụng AI." }
         val payload = JSONObject().put("model", "occ/claude-opus-4-8").put("max_tokens", 1800)
             .put("messages", JSONArray()
                 .put(JSONObject().put("role", "system")
@@ -80,7 +78,7 @@ internal object StudyAi {
             connection.connectTimeout = 10_000
             connection.readTimeout = 85_000
             connection.doOutput = true
-            connection.setRequestProperty("Authorization", "Bearer $key")
+            connection.setRequestProperty("Authorization", "Bearer $apiKey")
             connection.setRequestProperty("Content-Type", "application/json; charset=utf-8")
             connection.outputStream.use { it.write(payload.toString().toByteArray(Charsets.UTF_8)) }
             val status = connection.responseCode
