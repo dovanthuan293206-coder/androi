@@ -1,0 +1,13 @@
+AI STUDY MENTOR — COLOR & TOUCH UPDATE
+
+- Updated the signed-in Home greeting into a vivid indigo/violet gradient header.
+- Added more distinctive violet, mint-green and warm-orange accents to shortcut icons and statistic tiles.
+- Refreshed focus borders and progress gradients for clearer visual hierarchy.
+- Added a reusable pressScale interaction: tappable Home shortcuts, learner-level/profile chip,
+  review recommendation, Library entries and bottom navigation gently scale down while pressed
+  and retain a Material ripple response.
+- Existing Firebase data flows and navigation destinations are preserved.
+
+Build verification: Gradle compilation could not run in this environment because the Gradle 9.6.0
+wrapper distribution could not be downloaded (network DNS access to services.gradle.org unavailable).
+Open the project in Android Studio, sync Gradle, then build/run to verify on your SDK setup.

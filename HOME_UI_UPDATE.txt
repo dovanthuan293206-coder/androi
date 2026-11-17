@@ -1,0 +1,17 @@
+AI Study Mentor - Home UI update
+
+Updated:
+- Replaced the old Home content with a dashboard inspired by the supplied reference image.
+- Added greeting using the signed-in email, learner level, AI question input, three shortcuts,
+  a review card based on the latest saved activity, and live account statistics.
+- Kept existing Firebase authentication, Firestore data, AI question flow, quiz flow,
+  history/library, bookmarks, progress, profile, and bottom navigation.
+
+Main file changed:
+app/src/main/java/com/example/aistudymentor/MainActivity.kt
+
+Open this folder in Android Studio. Android Studio will recreate local.properties for the
+Android SDK on this computer. Sync Gradle, then run the app.
+
+Build note: This environment could not download Gradle 9.6.0 because network access to
+services.gradle.org was unavailable, so a successful Android build could not be verified here.

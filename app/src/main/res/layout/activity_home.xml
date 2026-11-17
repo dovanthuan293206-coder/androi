@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <!-- Phần Chào mừng & Avatar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hello, Student!"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#000000" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What would you like to learn today?"
+                android:textSize="13sp"
+                android:textColor="#666666" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="#CCCCCC" />
+    </LinearLayout>
+
+    <!-- Ô hỏi nhanh (Bấm vào để mở màn hình Đặt câu hỏi) -->
+    <TextView
+        android:id="@+id/tvAskBox"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="  🔍 Ask a question..."
+        android:gravity="center_vertical"
+        android:background="@android:drawable/editbox_background_normal"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp" />
+
+    <!-- 4 Nút chức năng chính -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnQuiz"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:text="Practice Quiz" />
+
+            <Button
+                android:id="@+id/btnHistory"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:text="History" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnBookmarks"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:text="Bookmarks" />
+
+            <Button
+                android:id="@+id/btnProgress"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:text="Progress" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Tiêu đề câu hỏi gần đây -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recent Questions"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="• Solve this equation: 2x + 3 = 7\n  Oct 20, 2026"
+        android:padding="12dp"
+        android:background="#F5F5F5"
+        android:layout_marginTop="8dp" />
+</LinearLayout>

@@ -1,0 +1,7 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.AIStudyMentor" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Background window để tránh màn hình đen ở Dark Mode -->
+        <item name="android:windowBackground">#F6F7FC</item>
+    </style>
+</resources>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AI Answer"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000000" />
+
+    <!-- Khung hiển thị câu hỏi của bạn -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your Question:\n2x + 3 = 7"
+        android:padding="12dp"
+        android:background="#F0F0F0"
+        android:layout_marginTop="16dp"
+        android:textColor="#333333" />
+
+    <!-- Khung hiển thị câu trả lời -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="💡 Answer &amp; Explanation:\n1. Subtract 3 from both sides: 2x = 4\n2. Divide by 2: x = 2"
+        android:padding="12dp"
+        android:background="#E8F5E9"
+        android:layout_marginTop="12dp"
+        android:textColor="#1B5E20" />
+
+    <!-- Nút quay lại trang chủ -->
+    <Button
+        android:id="@+id/btnBackHome"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Back to Home"
+        android:layout_marginTop="32dp" />
+
+</LinearLayout>

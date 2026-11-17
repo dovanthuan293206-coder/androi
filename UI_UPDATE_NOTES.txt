@@ -1,0 +1,11 @@
+AI STUDY MENTOR - UI UPDATE
+
+Da cap nhat giao dien theo 3 mau tham khao:
+1. Home: giu bo cuc loi chao, tim kiem AI, 3 nut tac vu, on tap hom nay va thong ke nhanh; them hieu ung fade/slide khi vao man hinh.
+2. Thu vien: man hinh kho hoc tap voi tim kiem, loc theo mon, the thong ke, danh sach bai hoi dap/luyen tap va nut danh dau bo nho.
+3. Tien do: tab Tong quan/Chi tiet, thong ke tu entries hien co, thanh tien do theo mon, nhan xet hoc tap va thanh tich XP. Thanh tien do co animation.
+
+Du lieu van lay tu StudyCloud/Firestore hien tai. Nut bookmark goi cloud.bookmark; mo noi dung goi showEntry hien co.
+
+Mo project bang Android Studio, chay Gradle Sync, sau do Build > Make Project va Run.
+Luu y: chua the xac nhan build trong moi truong dong goi nay vi Gradle Wrapper can tai Gradle distribution tu Internet, ket noi mang bi chan. Neu Android Studio bao loi, gui Build Output de xu ly.
